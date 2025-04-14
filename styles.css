@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f0f2f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 2rem;
+  color: #212529;
+}
+
+.profile-card {
+  background: white;
+  border-radius: 1.5rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  width: 100%;
+  max-width: 400px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.profile-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+}
+
+.profile-header {
+  background: linear-gradient(135deg, #4361ee, #3f37c9);
+  padding: 3rem 0 2rem;
+  text-align: center;
+  position: relative;
+}
+
+.profile-header::before {
+  content: '';
+  position: absolute;
+  bottom: -50px;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background: white;
+  clip-path: ellipse(75% 100% at 50% 100%);
+}
+
+.profile-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid white;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+  margin: 0 auto;
+  display: block;
+  position: relative;
+  z-index: 2;
+}
+
+.profile-name {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: white;
+  margin-top: 1rem;
+  position: relative;
+  z-index: 2;
+}
+
+.profile-title {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: 300;
+  margin-top: 0.5rem;
+  position: relative;
+  z-index: 2;
+}
+
+.profile-body {
+  padding: 2.5rem 2rem 2rem;
+  text-align: center;
+}
+
+.profile-bio {
+  color: #6c757d;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+  padding: 10px;	
+}
+
+.hobbies-title {
+  color: #4361ee;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+  display: inline-block;
+}
+
+.hobbies-title::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 3px;
+  background: #f72585;
+  border-radius: 3px;
+}
+
+.hobbies-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.8rem;
+  margin-top: 1.5rem;
+}
+
+.hobbies-list li {
+  background: rgba(67, 97, 238, 0.1);
+  color: #4361ee;
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.hobbies-list li:hover {
+  background: #4361ee;
+  color: white;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 480px) {
+  .profile-card {
+    max-width: 100%;
+  }
+
+  .profile-header {
+    padding: 2.5rem 0 1.5rem;
+  }
+
+  .profile-img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .profile-body {
+    padding: 2rem 1.5rem;
+  }
+}
